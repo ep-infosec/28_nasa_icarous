@@ -1,0 +1,21 @@
+#********************************************************************
+# Test case 1
+# This case demonstrates the geofence keep in and keep out resolution
+# capabilities of ICAROUS
+#
+#
+# Expected results:
+# Quadrotor should avoid keep out fence by rerouting itself around
+# the keep out fence. It should stop and step back when it encounters
+# the the keep in fence boundary.
+#********************************************************************
+
+# load mission flight plan
+wp load flightplan.txt
+
+# load keep in and keep out geofences
+geofence load geofence.xml
+
+# start mission from the home position
+long MISSION_START 
+

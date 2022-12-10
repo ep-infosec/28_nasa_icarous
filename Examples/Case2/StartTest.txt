@@ -1,0 +1,20 @@
+#********************************************************************
+# Test case 2
+# This case demonstrates the traffic resolution capabilities of ICAROUS
+#
+#
+#
+# Expected results:
+# Quadrotor should maneuver to avoid traffic and then get back on to
+# mission
+#********************************************************************
+
+# load mission flight plan
+wp load flightplan1.txt
+
+# load traffic
+traffic load 116 81 5 1 270 0
+
+# start mission from the home position
+long MISSION_START 
+
